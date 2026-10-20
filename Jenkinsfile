@@ -6,6 +6,13 @@ pipeline {
         stage('Test')     { steps { sh 'mvn -B test' } }
     }
     
+
+
+
+
+
+
+
     post {
         success {
             archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
