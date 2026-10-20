@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class AuthServiceTest {
     @Test
     void validLoginSucceeds() {
-        assertFalse(new AuthService().login("student@usms.ac.ma", "secret123"));
+        assertTrue(new AuthService().login("student@usms.ac.ma", "secret123"));
     }
 
     @Test
