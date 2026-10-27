@@ -16,6 +16,9 @@ class TestLoginService(unittest.TestCase):
     def test_identifiant_vide(self):
         self.assertFalse(self.service.validate("", "motdepasse123"))
 
+    def test_identifiant_espaces(self):
+        self.assertFalse(self.service.validate("   ", "motdepasse123"))
+
     def test_mot_de_passe_trop_court(self):
         self.assertFalse(self.service.validate("etudiant", "court"))
 
